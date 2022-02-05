@@ -4,10 +4,8 @@ from django.db import models
 class Category(models.Model):
     title = models.CharField(max_length=120)
     # image = models.CharField(max_length=120)
-    image = models.ImageField(
-        upload_to='uploads/categories/',
-        max_length=254, blank=True, null=True
-    )
+    image = models.ImageField(null=True, blank=True)
+
     description = models.TextField()
 
     def _str_(self):
