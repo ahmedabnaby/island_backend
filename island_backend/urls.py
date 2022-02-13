@@ -7,6 +7,7 @@ from island import views
 
 router = routers.DefaultRouter()
 router.register(r'categories', views.CategoryView, 'category')
+router.register(r'projects', views.ProjectView, 'project')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
