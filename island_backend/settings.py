@@ -156,5 +156,8 @@ DATABASES['default'].update(prod_db)
 
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
-     'https://island-light.herokuapp.com'
+     'https://island-light.herokuapp.com',
+     'http://island-light.herokuapp.com',
+     'https://island-final.herokuapp.com',
+     'http://island-final.herokuapp.com',
 ]
