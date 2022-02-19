@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Category, Project
+from .models import Category, Project, News
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title', 'description')
@@ -16,3 +16,10 @@ class ProjectAdmin(admin.ModelAdmin):
 # Register your models here.
 
 admin.site.register(Project, ProjectAdmin)
+
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'category', 'date')
+
+# Register your models here.
+
+admin.site.register(News, NewsAdmin)

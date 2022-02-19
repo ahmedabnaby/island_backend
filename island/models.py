@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 
 # Create your models here.
@@ -18,12 +19,14 @@ class Project(models.Model):
       
   def __str__(self):
     return self.title
-# class Project(models.Model):
-#     title = models.CharField(max_length=120)
-#     image = models.CharField(max_length=120)
-#     category = models.ForeignKey(Category, related_name='projects', on_delete=models.CASCADE)
 
-#     description = models.TextField()
+class News(models.Model):
+  title = models.CharField(max_length=200)
+  image = models.CharField(max_length=200)
+  category = models.ForeignKey(Category, related_name='news', on_delete=models.CASCADE)
+  description = models.TextField()
+  date = models.DateTimeField(auto_now_add=True, blank=True)
+      
+  def __str__(self):
+    return self.title
 
-#     def _str_(self):
-#         return self.title
